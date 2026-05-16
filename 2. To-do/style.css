@@ -1,0 +1,45 @@
+@import url(https://googleapis.com);
+
+body {
+    background-color: rgba(255, 165, 0, 0.025);
+}
+
+h1 {
+    font-family: 'Comfortaa', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    background-color: rgb(255, 100, 57);
+    border-width: 3px;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(113, 25, 0);
+    border-width: 3px;
+    border-radius: 5px;
+    transform: scale(0.98);
+}
+
+button:active {
+    background-color: rgb(255, 76, 26);
+    border-width: 3px;
+    border-radius: 5px;
+    transform: scale(0.95);
+}
+
+.checkbox {
+    transform: scale(1.5);
+}
