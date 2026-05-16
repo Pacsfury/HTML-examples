@@ -17,6 +17,6 @@ At this moment, this repository contains:
 
 ### 2. To-do
 
-**To-do** provides you a basic life organization tool to have a more orderade life!
+**To-do** provides you a basic life organization tool to have a more ordered life!
 
 > _Note that all projects are simple and only for educational purposes, not for real-world use_
