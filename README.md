@@ -13,10 +13,10 @@ At this moment, this repository contains:
 
 ### 1. Clicker
 
-**Clicker** is a HTML game where you click a button to gain points. A big red button is waiting you!
+**Clicker** is a HTML game where you click a button to gain points. A big red button is waiting for you!
 
 ### 2. To-do
 
-**To-do** provides you a basic life organitzation tool to have a more ordenated life!
+**To-do** provides you a basic life organization tool to have a more orderade life!
 
 > _Note that all projects are simple and only for educational purposes, not for real-world use_
