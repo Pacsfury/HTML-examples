@@ -7,9 +7,10 @@ To practice some web development, I have decided to make this repository, which 
 
 At this moment, this repository contains:
 - A README (wouldn't say...)
-- Two examples:
+- Three examples:
     - "1. Clicker"
     - "2. To-do"
+    - "3. HTML Viewer"
 
 ### 1. Clicker
 
@@ -18,5 +19,11 @@ At this moment, this repository contains:
 ### 2. To-do
 
 **To-do** provides you a basic life organization tool to have a more ordered life!
+
+### 3. HTML Viewer
+
+**HTML Viewer** lets you code full onefile HTML websites and run them.
+
+*Real time editing maybe comes soon*
 
 > _Note that all projects are simple and only for educational purposes, not for real-world use_
