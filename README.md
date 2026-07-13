@@ -11,6 +11,7 @@ At this moment, this repository contains:
     - "1. Clicker"
     - "2. To-do"
     - "3. HTML Viewer"
+    - "4. MD to HTML"
 
 ### 1. Clicker
 
@@ -23,6 +24,10 @@ At this moment, this repository contains:
 ### 3. HTML Viewer
 
 **HTML Viewer** lets you code full onefile HTML websites and run them.
+
+### 3. MD to HTML (by @anishagarg327)
+
+**MD to HTML** transpiles your MD code to an HTML display. (_Some bugs were detected, so we are working to fix them ASAP_)
 
 *Real time editing maybe comes soon*
 
