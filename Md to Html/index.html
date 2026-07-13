@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 70vh;
+        }
+        .box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        textarea, .preview {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            resize: none;
+            outline: none;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+        textarea:focus {
+            border-color: #3498db;
+        }
+        .preview {
+            border-top: 4px solid #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <h1>📝 Markdown to HTML Converter</h1>
+    <div class="container">
+        <div class="box">
+            <label for="markdown-input">Markdown Input</label>
+            <textarea id="markdown-input" placeholder="Type # Heading or **Bold** text here..."></textarea>
+        </div>
+        <div class="box">
+            <label>Live HTML Preview</label>
+            <div id="html-preview" class="preview"></div>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('markdown-input');
+        const preview = document.getElementById('html-preview');
+        function parseMarkdown(text) {
+            let html = text;
+            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+            html = html.replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>');
+            html = html.replace(/\*(.*)\*/gim, '<em>$1</em>');
+            html = html.replace(/\n$/gim, '<br />');
+            return html.trim();
+        }
+        input.addEventListener('input', (e) => {
+            const markdownText = e.target.value;
+            preview.innerHTML = parseMarkdown(markdownText);
+        });
+    </script>
+</body>
+</html>
