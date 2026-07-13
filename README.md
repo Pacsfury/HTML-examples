@@ -25,10 +25,10 @@ At this moment, this repository contains:
 
 **HTML Viewer** lets you code full onefile HTML websites and run them.
 
-### 3. MD to HTML (by @anishagarg327)
+*Real time editing maybe comes soon*
+
+### 4. MD to HTML (by @anishagarg327)
 
 **MD to HTML** transpiles your MD code to an HTML display. (_Some bugs were detected, so we are working to fix them ASAP_)
-
-*Real time editing maybe comes soon*
 
 > _Note that all projects are simple and only for educational purposes, not for real-world use_
