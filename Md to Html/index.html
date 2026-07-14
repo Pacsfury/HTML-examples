@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown to HTML Converter</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -51,6 +52,25 @@
         .preview {
             border-top: 4px solid #2ecc71;
         }
+        .preview code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .preview pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            overflow-x: auto;
+        }
+        .preview blockquote {
+            border-left: 4px solid #3498db;
+            margin: 0;
+            padding-left: 10px;
+            color: #666;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -58,30 +78,23 @@
     <div class="container">
         <div class="box">
             <label for="markdown-input">Markdown Input</label>
-            <textarea id="markdown-input" placeholder="Type # Heading or **Bold** text here..."></textarea>
+            <textarea id="markdown-input" placeholder="Type markdown here... (e.g., # Headings, **bold**, _italic_, > quotes, `code`)"></textarea>
         </div>
+        
         <div class="box">
             <label>Live HTML Preview</label>
             <div id="html-preview" class="preview"></div>
         </div>
     </div>
-
     <script>
         const input = document.getElementById('markdown-input');
         const preview = document.getElementById('html-preview');
-        function parseMarkdown(text) {
-            let html = text;
-            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-            html = html.replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>');
-            html = html.replace(/\*(.*)\*/gim, '<em>$1</em>');
-            html = html.replace(/\n$/gim, '<br />');
-            return html.trim();
-        }
+        marked.setOptions({
+            breaks: true,
+            gfm: true
+        });
         input.addEventListener('input', (e) => {
-            const markdownText = e.target.value;
-            preview.innerHTML = parseMarkdown(markdownText);
+            preview.innerHTML = marked.parse(e.target.value);
         });
     </script>
 </body>
