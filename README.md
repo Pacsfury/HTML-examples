@@ -7,11 +7,12 @@ To practice some web development, I have decided to make this repository, which 
 
 At this moment, this repository contains:
 - A README (wouldn't say...)
-- Three examples:
+- Five examples:
     - "1. Clicker"
     - "2. To-do"
     - "3. HTML Viewer"
     - "4. MD to HTML"
+    - "5. JS file executor"
 
 ### 1. Clicker
 
@@ -29,6 +30,13 @@ At this moment, this repository contains:
 
 ### 4. MD to HTML (by @anishagarg327)
 
-**MD to HTML** transpiles your MD code to an HTML display. (_Some bugs were detected, so we are working to fix them ASAP_)
+**MD to HTML** transpiles your MD code to an HTML display. 
+
+(_Some bugs were detected, so we are working to fix them ASAP_)
+
+### 5. JS file executor (by @raahulcodes)
+
+**JS file executor** executes a JS file directly on the page.
+
 
 > _Note that all projects are simple and only for educational purposes, not for real-world use_
